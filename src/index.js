@@ -4,7 +4,7 @@ import App from './App';
 import './index.css';
 
 ReactDOM.render(
-  <h1>Hi, world!</h1>,
-  document.getElementById('root2')
+  <h1>Hello,React!</h1>,
+  document.getElementById('box')
 );
 
