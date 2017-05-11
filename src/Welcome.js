@@ -5,14 +5,27 @@ class Welcome extends React.Component {
         this.state = {
             date: new Date()
         }
+        setInterval(()=>{
+            this.setState({
+                date: new Date()//更新Date
+            })
+        })
+        console.log('我已经在constructor里面初始化了props和state')
+    }
+    componentWillMount(){
+        console.log('运行到这里的话，说明马上就要运行 render 了')
     }
     render() {
+        console.log('恩，这里是render')
         return (
             <div>
                 <h1>Hello, {this.props.name}</h1>
                 <h2>{this.state.date.toString()}</h2>
             </div>
         )
+    }
+    componentDidMount(){
+        console.log('已经挂载到页面里面了')
     }
 }
 
