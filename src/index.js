@@ -5,7 +5,7 @@ import './index.css';
 import Welcome from './Welcome'
 
 ReactDOM.render(
-  <Welcome/>,
+  <Welcome name="dandan"/>,
   document.getElementById('box')
 
 )
