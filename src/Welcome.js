@@ -6,11 +6,7 @@ class Welcome extends React.Component {
             date: new Date(),
             test: '1'
         }
-        setInterval(()=>{
-            this.setState({
-                date: new Date()//更新Date
-            })
-        })
+       
         this.setState({
             date: new Date(),
             test: 'constructor'
