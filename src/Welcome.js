@@ -49,18 +49,21 @@ class Welcome extends React.Component {
             date: new Date(),
             test: 'shouldComponentUpdate'
         }) 
+        console.log('我应不应该更新呢')
     }
     componentWillUpdate(){
      this.setState({
        date: new Date(), // 更新 date
        test: 'componentWillUpdate'
      })
+     console.log('我马上就要更新了')
    }
    componentDidUpdate(){
      this.setState({
        date: new Date(), // 更新 date
        test: 'componentDidUpdate'
      })
+     console.log('已经更新了')
    }
    componentWillUnmount(){
        this.setState({
