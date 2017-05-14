@@ -7,7 +7,7 @@ class App extends Component {
     super(props)
     this.state = {
       newTodo: 'test',
-      toList: [
+      todoList: [
         {id: 1, title: '第一个待办'}
       ]
     }
@@ -22,6 +22,7 @@ class App extends Component {
         <div className="inputWrapper">
           <input type="text" value={this.state.newTodo}/>
         </div>
+        <TodoInput content={this.state.newTodo}/>
         <ol>
           {todos}
         </ol>
