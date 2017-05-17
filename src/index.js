@@ -4,8 +4,3 @@ import App from './App';
 import './index.css';
 //import Welcome from './Welcome'
 
-
-ReactDOM.render(
-  <Welcome name="dandan"/>,
-  document.getElementById('root')
-)
