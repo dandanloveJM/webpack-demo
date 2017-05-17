@@ -4,3 +4,7 @@ import App from './App';
 import './index.css';
 //import Welcome from './Welcome'
 
+ReactDOM.render(
+  <App/>,
+  document.getElementById('root')
+)

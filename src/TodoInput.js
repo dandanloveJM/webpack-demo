@@ -1,6 +1,6 @@
-import React, { Componenet } from 'react'
+import React, { Component } from 'react'
 
-class TodoInput extends Componenet {
+class TodoInput extends Component {
     render(){
         return <input type="text" value="this.props.content" />
     }
