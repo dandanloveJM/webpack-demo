@@ -44,18 +44,21 @@ class Welcome extends Component {
         date: new Date(), // 更新 date
         test: 'shouldComponentUpdate'
       })
+      console.log(' shouldComponentUpdate')
     }
     componentWillUpdate(){
       this.setState({
         date: new Date(), // 更新 date
         test: 'componentWillUpdate'
       })
+      console.log('componentWillUpdate')
     }
     componentDidUpdate(){
       this.setState({
         date: new Date(), // 更新 date
         test: 'componentDidUpdate'
       })
+      console.log('componentDidUpdate')
     }
     componentWillUnmount(){
       console.log('要死了')
