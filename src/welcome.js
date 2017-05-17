@@ -32,36 +32,36 @@ class Welcome extends Component {
             </div>
         )
     }
-    componentDidMount(){
+    componentDidMount() {
         this.setState({
             date: new Date(),
-            test:'componentDidMount'
+            test: 'componentDidMount'
         })
         console.log('已经挂载在页面了')
     }
-    shouldComponentUpdate(){
-      this.setState({
-        date: new Date(), // 更新 date
-        test: 'shouldComponentUpdate'
-      })
-      console.log(' shouldComponentUpdate')
+    shouldComponentUpdate() {
+        this.setState({
+            date: new Date(), // 更新 date
+            test: 'shouldComponentUpdate'
+        })
+        console.log(' shouldComponentUpdate')
     }
-    componentWillUpdate(){
-      this.setState({
-        date: new Date(), // 更新 date
-        test: 'componentWillUpdate'
-      })
-      console.log('componentWillUpdate')
+    componentWillUpdate() {
+        this.setState({
+            date: new Date(), // 更新 date
+            test: 'componentWillUpdate'
+        })
+        console.log('componentWillUpdate')
     }
-    componentDidUpdate(){
-      this.setState({
-        date: new Date(), // 更新 date
-        test: 'componentDidUpdate'
-      })
-      console.log('componentDidUpdate')
+    componentDidUpdate() {
+        this.setState({
+            date: new Date(), // 更新 date
+            test: 'componentDidUpdate'
+        })
+        console.log('componentDidUpdate')
     }
-    componentWillUnmount(){
-      console.log('要死了')
+    componentWillUnmount() {
+        console.log('要死了')
     }
 
 }
