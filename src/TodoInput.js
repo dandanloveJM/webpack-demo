@@ -2,13 +2,16 @@ import React, { Component } from 'react'
 
 class TodoInput extends Component {
     render(){
+        console.log(this)
         return <input type="text"  defaultValue={this.props.content} 
-        onkeypress = {this.submit}/>
+        onKeyPress={this.submit.bind(this)} />
     }
     submit(e){
+        console.log('1')
         if(e.key === 'Enter'){
-            console.log('用户按回车了')
+            this.props.onSubmit.call()
         }
     }
 }
+
 export default TodoInput
