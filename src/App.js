@@ -16,12 +16,14 @@ class App extends Component {
         {id:2, title:'第二个待办'}
       ]
     }
+    
   }
   render() {
+    let Todo = this
     let todos = this.state.todoList.map(function(item, index){
       return (
-        <li>
-          <TodoItem todo={item}/>
+        <li key={index}>
+          <TodoItem todo={item} onToggle={Todo.toggle.bind(Todo)} />
         </li>
       )
     })
@@ -38,6 +40,10 @@ class App extends Component {
         </ol>
       </div>
     );
+  }
+  toggle(e,todo){
+    todo.status = todo.status === 'completed'? '' : 'completed'
+    this.setState(this.state)
   }
   addTodo(event){
     this.state.todoList.push({
@@ -59,6 +65,7 @@ class App extends Component {
       todoList: this.state.todoList
     })
   }
+  
 }
 
 export default App;
