@@ -23,7 +23,8 @@ class App extends Component {
     let todos = this.state.todoList.map(function(item, index){
       return (
         <li key={index}>
-          <TodoItem todo={item} onToggle={Todo.toggle.bind(Todo)} />
+          <TodoItem todo={item} onToggle={Todo.toggle.bind(Todo)} 
+          onDelete={Todo.delete.bind(Todo)}/>
         </li>
       )
     })
@@ -40,6 +41,11 @@ class App extends Component {
         </ol>
       </div>
     );
+  }
+  delete(event,todo){
+    todo.deleted = true
+    this.setState(this.state)
+    console.log(todo.deleted)
   }
   toggle(e,todo){
     todo.status = todo.status === 'completed'? '' : 'completed'
